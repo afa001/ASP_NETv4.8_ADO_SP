@@ -1,0 +1,126 @@
+﻿/* Estilo general para todo el cuerpo */
+/*body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}*/
+
+/* Estilos para los encabezados */
+h6 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Estilo para los TextBox */
+input[type="text"],
+input[type="date"],
+.aspNetDisabled,
+select
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover y enfoque de los campos de texto */
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+select {
+    appearance: none; /* Oculta el icono del sistema operativo */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+/* Estilo del botón */
+button, .aspNetButton {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover, .aspNetButton:hover {
+        background-color: #2980b9;
+    }
+
+/* Estilos del GridView */
+.gridview-style {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .gridview-style th, .gridview-style td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .gridview-style th {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    .gridview-style tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .gridview-style tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .gridview-style .delete-btn {
+        color: #e74c3c;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .gridview-style .delete-btn:hover {
+            text-decoration: underline;
+        }
+
+/* Aplicado al contenedor principal (body o .container) */
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* Esto hace que el contenido ocupe el espacio disponible */
+}
+
+footer {
+    height: 80px; /* Altura fija para el footer */
+    line-height: 80px; /* Centrado del texto */
+    background-color: #f8f9fa;
+    text-align: center;
+    margin-top: 20px; /* Espacio entre el contenido y el footer */
+}
