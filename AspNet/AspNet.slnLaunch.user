@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "AspNetWebFormsV4.8\\AspNetWebFormsV4.8.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AspNetFrameworkV4.8\\AspNetFrameworkV4.8.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
