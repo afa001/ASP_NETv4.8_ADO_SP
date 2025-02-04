@@ -1,4 +1,5 @@
-﻿@model IEnumerable<AspNetFrameworkV4._8.Models.TblClientes>
+﻿@*@model IEnumerable<AspNetFrameworkV4._8.Models.TblClientes>*@
+@model IEnumerable<AspNetFrameworkV4._8.Models.ClienteViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -9,42 +10,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.RazonSocial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IdTipoCliente)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaCreacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RFC)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RazonSocial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoCliente.TipoCliente)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaCreacion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RFC)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+    <thead>
+        <tr>
+            <th>Razon Social</th>
+            <th>Tipo Cliente</th>
+            <th>Fecha Creación</th>
+            <th>RFC</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.RazonSocial</td>
+                <td>@item.NombreTipoCliente</td>
+                <td>@item.FechaCreacion.ToString("dd/MM/yyyy")</td>
+                <td>@item.RFC</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
